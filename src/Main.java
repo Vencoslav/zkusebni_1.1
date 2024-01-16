@@ -1,17 +1,49 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        List<String> seznam = new ArrayList<>();//seznam s datovím typem string = text
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        seznam.add("Ivan");
+        seznam.add("Klaudie");
+        seznam.add("Karel");
+        seznam.add("Jindra");
+        seznam.add("Adam");
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        //ručně přidaná jména
+
+        System.out.println("Seznam jmen:"+seznam);
+
+        System.out.println("Jmena delší jak 4: ");
+        for(String jmeno : seznam){//ciklu který vytvoří položku jméno s datovým tipem string který je součástí senzamu
+            if(jmeno.length() > 4){// podmínka pokud má jména více písmen jak 4
+                System.out.println(jmeno);// vypíše položku podle podmínky
+            }
+        }
+
+        System.out.println("Jména začínající na písmeno K: ");
+        for(int i = 0; i < seznam.size(); i++){// to samé jako předešlý ciklus akotrát delší verze
+            String jmeno = seznam.get(i);
+            if(jmeno.startsWith("K")){
+                System.out.println(jmeno);
+            }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
